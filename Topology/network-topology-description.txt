@@ -1,0 +1,36 @@
+NETWORK TOPOLOGY DESCRIPTION
+Project: Multi-Area OSPF Network
+Simulation Tool: Cisco Packet Tracer
+
+OVERVIEW
+This topology shows five Cisco 2901 routers (Router0 through Router4) connected in a linear path between two end-user PCs. The network is divided into two labeled OSPF areas: Area 0 on the left and Area 1 on the right.
+
+TOPOLOGY COMPONENTS
+- Routers: Router0, Router1, Router2, Router3, Router4
+- End devices: PC0 and PC1
+- Routing protocol intended: OSPF
+- Simulation platform: Cisco Packet Tracer
+
+VISIBLE IP ADDRESS LABELS
+- PC0: 10.1.1.10
+- Router0 LAN-side label: 10.1.1.1
+- Router0–Router1 link: 20.1.1.1 and 20.1.1.2
+- Router1–Router2 link: 30.1.1.1 and 30.1.1.2
+- Router2–Router3 link: 40.1.1.1 and 40.1.1.2
+- Router3–Router4 link: 50.1.1.1 and 50.1.1.2
+- Router4 LAN-side label: 60.1.1.1
+- PC1: 60.1.1.10
+
+AREA DESIGN
+- Area 0: The left-side portion contains PC0, Router0, and Router1.
+- Area 1: The right-side portion contains Router3, Router4, and PC1.
+- Router2 is positioned between the two labeled areas and appears to connect the two sides.
+
+IMPORTANT VALIDATION NOTE
+The screenshot shows the intended topology and IP labels, but it does not prove the exact OSPF area assignment on every router interface or confirm that end-to-end connectivity succeeds. Verify the configuration in Packet Tracer using commands such as:
+- show ip ospf neighbor
+- show ip route
+- show ip interface brief
+- ping <destination-IP>
+
+Before publishing, confirm the OSPF area assignments for the Router1–Router2 and Router2–Router3 links, and ensure the addressing and subnet masks are configured consistently.
